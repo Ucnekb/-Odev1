@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.kredi_hesaplama"
+             Title="Kredi Hesaplama">
+    
+    
+    <VerticalStackLayout>
+        <VerticalStackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Kredi Türü:" VerticalOptions="Center" Margin="0,0,25,0"/>
+                <Picker Title="Kredi Türü" x:Name="KrediPicker">
+                    <Picker.Items>
+                        <x:String>İhtiyaç Kredisi</x:String>
+                        <x:String>Konut Kredisi</x:String>
+                        <x:String>Taşıt Kredisi</x:String>
+                        <x:String>Ticari Kredisi</x:String>
+                    </Picker.Items>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Oranı giriniz:" VerticalOptions="Center" Margin="0,0,15,0" />
+                <Entry x:Name="EntryOran" Placeholder="Oranı giriniz" Keyboard="Numeric"  />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Vadeyi giriniz:" VerticalOptions="Center"  Margin="0,0,10,0"/>
+                <Entry x:Name="EntryVade" Placeholder="Vadeyi giriniz" Keyboard="Numeric"  />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Tutarı giriniz:" VerticalOptions="Center" Margin="0,0,15,0" />
+                <Entry x:Name="EntryTutar" Placeholder="Tutarı giriniz" Keyboard="Numeric"  />
+            </StackLayout>
+            <Button Text="Hesapla" Clicked="HesaplaButton_Clicked"  Margin="0,15,0,0" />
+            <Label Text="{Binding aylikTaksit, StringFormat='Taksit Tutarı: {0:F}'}"  Margin="0,195,0,0" HorizontalOptions="Center" />
+            <Label Text="{Binding toplamBorc, StringFormat='Toplam Ödeme: {0:F}'}" Margin="0,11,0,0" HorizontalOptions="Center" />
+            <Label Text="{Binding toplamFaiz, StringFormat='Toplam Faiz: {0:F}'}" Margin="0,11,0,0" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

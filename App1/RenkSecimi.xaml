@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RenkSecimi"
+             Title="Renk Secimi">
+    <StackLayout Padding="20">
+        <Label Text="Kırmızı" />
+        <Slider x:Name="redSlider" Maximum="255" Background="red" ValueChanged="Slider_ValueChanged"/>
+        <Label x:Name="redLabel" />
+
+        <Label Text="Yeşil" />
+        <Slider x:Name="greenSlider" Maximum="255" Background="Green" ValueChanged="Slider_ValueChanged"/>
+        <Label x:Name="greenLabel" />
+
+        <Label Text="Mavi" />
+        <Slider x:Name="blueSlider" Maximum="255" Background="Blue" ValueChanged="Slider_ValueChanged"/>
+        <Label x:Name="blueLabel" />
+
+        <StackLayout Orientation="Vertical">
+            <Label Text="Son Renk Değeri" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label x:Name="resultLabel" VerticalOptions="Center"  HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <ImageButton Source="copy.png"  HeightRequest="1" WidthRequest="1" HorizontalOptions="End" Clicked="CopyButton_Clicked" />
+        <Button Text="Random" Clicked="RandomButton_Clicked" />
+
+        <BoxView x:Name="colorBox" WidthRequest="50" HeightRequest="50" Margin="0,10,0,0"/>
+    </StackLayout>
+    </ContentPage>

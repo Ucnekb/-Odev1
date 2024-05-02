@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.VucutKitleEndeksi"
+             Title="VucutKitleEndeksi">
+    <StackLayout Padding="20">
+        <Label Text="Vücut Ağırlığı (kg):" />
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="weightEntry" Placeholder="Ağırlık girin" />
+            
+        </StackLayout>
+        <Slider x:Name="weightSlider" Minimum="0" Maximum="200"  ValueChanged="Slider_ValueChanged" />
+
+        <Label Text="Boy (cm):" />
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="heightEntry" Placeholder="Boy girin" />
+            
+        </StackLayout>
+        <Slider x:Name="heightSlider" Minimum="0" Maximum="250" ValueChanged="Slider_ValueChanged" />
+
+        <Label  HorizontalOptions="Center"  x:Name="bmiLabel" />    
+
+        <Button Text="Hesapla" Clicked="CalculateBMI_Clicked" />
+    </StackLayout>
+
+</ContentPage>
